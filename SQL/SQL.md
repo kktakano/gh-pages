@@ -36,6 +36,10 @@
 ## 基本的なデータ型
   データ型は各製品に実装されるSQLによって若干の差はあるため注意が必要。公式には基本的なデータ型として次の7つが定義されている。
   * **CHARACTER STRING**
-    * テキストを表す全てのデータ型。固定長と可変長がある。  
+    * 使用される文字セットに関わりなく、テキストを表す全てのデータ型。固定長と可変長がある。  
       可変長の場合はCHARACTER VARYINGと定義される。引数として固定長の場合は、その文字数をとり、可変長の場合は文字数の最大値をとる。  
-      CHARACTER => CHAR, CHARACTER VARYING => CHAR VARYING や VARCHAR　と省力ことも可能。
+      CHARACTER => CHAR, CHARACTER VARYING => CHAR VARYING や VARCHAR　と省略することも可能。
+  
+  * **NATIONAL CHARACTER**
+    * 文字セットが実装時に定義され、もっとも一般的に使用される言語に対応する事を除けば、実質的には、CHARACTER STRING型と同じ。  
+      NATIONAL CHAR　または　NCHAR　と省略することが可能。
