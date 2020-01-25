@@ -59,3 +59,21 @@
         小数点を持たない精度の整数値を定義。  
       * **SMALLINT**  
         精度がINTEGERよりも低いことを除けば、INTEGERと同じ。
+  * **APPROXIMATE NUMERIC**
+    精度を持つがスケールと言ったものはない。APPROXIMATE NUMERIC は次の通り。  
+      * **FLOAT**  
+        指定される精度の値以上の２進数精度を持つ。  
+      * **REAL**  
+        この型の精度は10進数で、実装時に定義される。  
+      * **DOUBLE PRECISION**  
+        この型の精度も10進数で実装時に定義されるがREALの精度よりも高い。
+  * **DATETIME**  
+    日付または時刻を示す表現の様々な部分を表す。3つのデータ型がある。  
+      * **DATE**  
+        YEAR,MONTH,DAY という３つの整数フィールドの集合の型。  
+      * **TIME**  
+        HOUR,MINUTE,SECOND という３つの数値フィードの集合の型。  
+      * **TIMESTAMP**  
+        DATEとTIMETIMEの組み合わせの型。
+  * **INTERVAL**  
+    様々な日付や時刻間の間隔で、時間の量を示すデータ型。
