@@ -12,4 +12,11 @@
   `UPDATE テーブル名 SET 変更内容 WHERE 条件;`  
   例）idが３のレコードを、priceが200になるように更新する場合  
   `UPDATE goods SET price = 100 WHERE id = 2;`  
-  
+  注）WHERE句で条件を指定しなければ指定したカラムが一律で更新される。
+## データの削除<DELETE>
+  DELETE文を用いる事でデータの削除を行う。  
+  `DELETE FROM テーブル名 WHERE 条件;`  
+  例）idが３のレコードを削除する場合  
+  `DELETE FROM goods WHERE id = 3;`  
+  注）WHERE句で条件を指定しなければ指定したカラムが全て削除される。
+  注）他のテーブルから外部参照されている値を含むデータは削除できない。
