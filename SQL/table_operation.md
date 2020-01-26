@@ -53,4 +53,5 @@
 ## テーブル制約の追加
   `ALTER TABLE テーブル名 ADD テーブル制約の定義 ;`
 ## 
-  `ALTER TABLE テーブル名 DROP CONSTRAINT テーブル制約の定義[ RESTRICT | CASCADE ] ;`
+  `ALTER TABLE テーブル名 DROP CONSTRAINT テーブル制約の定義[ RESTRICT | CASCADE ] ;`  
+  [ RESTRICT | CASCADE ] とは、RESTRICT 句と CASCADE 句のいずれかを記述するという意味です。RESTRICT 句が指定された場合は、指定した表がビューや整合制約により参照されたものである場合は変更は行われません。CASCADE 句が指定された場合は、列を参照するビューは変更されず、それらは破棄されます。
