@@ -30,10 +30,15 @@ WHERE句の条件には、以下のように"="や"<="のような比較演算�
   `SELECT *`  
   `FROM users`  
   `WHERE NOT prefecture = "福岡県"`  
-**範囲指定に使える演算子**  
+**検索に便利な演算子**  
   * BETWEEN演算子  
   ageが20以上25以下のuserを取得  
   `SELECT *`  
   `FROM users`  
   `WHERE age BETWEEN 20 AND 25`  
+  * IN演算子  
+  prefectureが"東京都"もしくは"福岡県"であるuserを取得  
+  `SELECT *`  
+  `FROM users`  
+  `WHERE prefecture IN ("東京都", "福岡県")`  
   
