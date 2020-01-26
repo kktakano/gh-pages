@@ -26,6 +26,7 @@
 
 
 # テーブルの変更
+  ALTER TABLE は以下の機能を備えています。
 * テーブルにカラムを追加する  
 * テーブルにあるカラムの修正  
 * テーブルからカラムを削除する  
@@ -49,4 +50,7 @@
 ## カラムの削除
   `ALTER TABLE テーブル名 DROP カラム名;`  
 
+## テーブル制約の追加
+  `ALTER TABLE テーブル名 ADD テーブル制約の定義 ;`
 ## 
+  `ALTER TABLE テーブル名 DROP CONSTRAINT テーブル制約の定義[ RESTRICT | CASCADE ] ;`
