@@ -17,3 +17,17 @@ SELECT句でデータを取得するとき、AS句を併用すると、そのカ
 ## 重複する行の除外<DISTINCT>
 DISTINCTを使用すると、指定したカラムの値が重複する行を除外してデータを取得取得する事ができる。  
 `SELECT DISTINCT カラム名`  
+例）  
+`SELECT user_id`  
+`FROM shifts`  
+`WHERE date = "2015-07-01"`  
+これでは一日の内に2コマ分あるひとはuser_idが重複する。  
+  
+`SELECT DISTINCT user_id`  
+`FROM shifts`  
+`WHERE date = "2015-07-01"`  
+SELECT句がuser_idからDISTINCT user_idとなったことで、"user_id"が重複する行を除いたSQL文となる。  
+  
+## レコードのグループ化<GROUP BY句>
+GROUP BY句を使用すると、指定したカラムが同じ値を持つデータを1つのグループとしてまとめることが出来る。
+`GROUP BY カラム名`
