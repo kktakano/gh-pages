@@ -37,4 +37,22 @@ GROUP BY句を使用すると、指定したカラムが同じ値を持つデー
   `FROM shifts`  
   `WHERE date = "2015-07-01"`  
   `GROUP BY user_id`  
+
+## レコードの数を数える<COUNT関数>
+COUNT関数はグループ化されたデータに対して使用することが出来る集計関数の一つ。  
+COUNT関数はカラムを指定して使用することで、そのカラムの値がNULLでないデータの行数を取得することが出来る。  
+`SELECT COUNT(カラム名)`  
+行の値が全てNULLであるレコードも含め、その行数を取得.  
+`SELECT COUNT(*)`  
+例）  
+`SELECT user_id, COUNT(*)`  
+`FROM shifts`  
+`WHERE date = "2015-07-01"`  
+`GROUP BY user_id`  
+先ほどGROUP BY句で実行したSQL文の、SELECT句にCOUNT(*)を追加したもの。  
   
+グループ化されたデータに使用できる集計関数は他に  
+平均を求めるAVG  
+最大値を求めるMAX  
+最小値を求めるMIN  
+などが存在する。
