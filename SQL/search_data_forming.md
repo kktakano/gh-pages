@@ -29,5 +29,12 @@ DISTINCTを使用すると、指定したカラムの値が重複する行を除
 SELECT句がuser_idからDISTINCT user_idとなったことで、"user_id"が重複する行を除いたSQL文となる。  
   
 ## レコードのグループ化<GROUP BY句>
-GROUP BY句を使用すると、指定したカラムが同じ値を持つデータを1つのグループとしてまとめることが出来る。
-`GROUP BY カラム名`
+GROUP BY句を使用すると、指定したカラムが同じ値を持つデータを1つのグループとしてまとめることが出来る。  
+`GROUP BY カラム名`  
+例）"shifts"テーブルから"date"が"2015-07-01"のレコード取得  
+  "user_id"が同じ値のレコードをグループ化し、そのグループ化された一覧の"user_id"のみを表示  
+  `SELECT user_id`  
+  `FROM shifts`  
+  `WHERE date = "2015-07-01"`  
+  `GROUP BY user_id`  
+  
