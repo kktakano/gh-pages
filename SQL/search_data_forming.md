@@ -58,4 +58,23 @@ COUNT関数はカラムを指定して使用することで、そのカラムの
 などが存在する。
   
 # 複雑なデータの検索
-## テーブルの結合
+## テーブルの結合<JOIN>
+JOINを使用すると、指定したそれぞれのテーブルの、カラムの値が一致するデータを結合することが出来る。  
+JOIN句はFROM句のあとに記述し、結合の対象となるテーブルを指定します。  
+そしてそれぞれのテーブルの結合するカラムをONの後に=（イコール）を用いて指定します。  
+`FROM shifts`  
+`JOIN users ON shifts.user_id = users.id`  
+このSQL文は、  
+「"shifts"テーブルに"users"テーブルを結合させます。  
+　"shifts"テーブルの各行には、その行の"user_id"が"users"テーブルの"id"と一致する行を結合させます。」  
+という意味です。  
+このとき、ONの後にshiftsやusersとテーブル名を再度書くのは冗長  
+"shifts"テーブルならs、"users"テーブルならuのように、各テーブル名の頭文字を取ってあげるのが一般的  
+`SELECT`  
+`  CONCAT(family_name, first_name) "名前",`  
+`  COUNT(*) "コマ数"`  
+`FROM shifts s`  
+`JOIN users u ON s.user_id = u.id`  
+`WHERE date = "2015-07-01"`  
+`GROUP BY user_id`  
+これで"2015-07-01"に、誰が、何コマシフトに入ったか、という情報を表示する事が可能。  
